@@ -45,20 +45,21 @@ test('TC-003: Valid Login', async ({page}) => {
 test.only('TC-004: Test Login and Register', async ({page}) => {
   await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
 
-  await page.locator('.text-reset').click();
+  // Uncheck if you want to create user account again.
+  // await page.locator('.text-reset').click();
 
-  await page.locator('#firstName').fill('Hariharan');
-  await page.locator('#lastName').fill('Raveendran');
-  await page.locator('#userEmail').fill('harioz1515@gmail.com');
-  await page.locator('#userMobile').fill('1234567890');
-  await page.locator('.custom-select').selectOption({label: 'Student'});
-  await page.locator('[ value = "Male"]').check();
-  await page.locator('#userPassword').fill('Test@123');
-  await page.locator('#confirmPassword').fill('Test@123');
-  await page.locator('[type = "checkbox"]').check();
-  await page.locator('#login').click();
+  // await page.locator('#firstName').fill('Hariharan');
+  // await page.locator('#lastName').fill('Raveendran');
+  // await page.locator('#userEmail').fill('harioz1515@gmail.com');
+  // await page.locator('#userMobile').fill('1234567890');
+  // await page.locator('.custom-select').selectOption({label: 'Student'});
+  // await page.locator('[ value = "Male"]').check();
+  // await page.locator('#userPassword').fill('Test@123');
+  // await page.locator('#confirmPassword').fill('Test@123');
+  // await page.locator('[type = "checkbox"]').check();
+  // await page.locator('#login').click();
 
-  await page.locator('.text-reset').click({force: true});
+  // await page.locator('.text-reset').click({force: true});
 
   await page.locator('#userEmail').fill('harioz1515@gmail.com');
   await page.locator('#userPassword').fill('Test@123');

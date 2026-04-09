@@ -63,7 +63,11 @@ test.only('TC-004: Test Login and Register', async ({page}) => {
   await page.locator('#userPassword').fill('Test@123');
   await page.locator('#login').click();
 
-  console.log(await page.locator('.card-body b').first().textContent());
-  console.log(await page.locator('.card-body b').allTextContents());
+  //await page.waitForLoadState('networkidle'); // wait for the network to be idle ( All API calls are completed ).
+
+  const cards = await page.locator('.card-body b').waitFor(); // Another way to wait for the elements to be visible.
+
+  console.log(cards.first().textContent());
+  console.log(cards.allTextContents());
 
 });
